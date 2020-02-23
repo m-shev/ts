@@ -1,11 +1,13 @@
 import React from 'react';
 import styles from './App.module.scss';
 import './index.css';
-import './types-vs-interface/types';
+import { Generics } from './generics/Generics';
+
 function App() {
     return (
         <div className={styles.root}>
-            <div className={styles.title}>Typescript Examples</div>
+            <span className={styles.title}>Typescript Examples</span>
+            <Generics/>
         </div>
     );
 }

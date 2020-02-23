@@ -1,9 +1,12 @@
 .root {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .title {
- font-size: large;
+  font-size: large;
   color: blue;
+  text-align: center;
 }

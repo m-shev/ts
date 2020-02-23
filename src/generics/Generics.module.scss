@@ -1,0 +1,15 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.textArea {
+  margin-top: 50px;
+  width: 200px;
+  height: 200px;
+}
