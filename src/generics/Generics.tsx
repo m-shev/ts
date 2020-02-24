@@ -27,21 +27,21 @@ export class Generics extends React.Component<Props, State> {
                 <button onClick={this.onClick} className={'btn'}>
                     {count}
                 </button>
-                <textarea value={outPut} readOnly={true} className={styles.textArea}/>
+                {/*<textarea value={outPut} readOnly={true} className={styles.textArea}/>*/}
             </div>
         );
     }
 
     private readonly onClick = () => {
-        this.setState({});
+        this.setState({count: this.state.count + 1});
     };
 
-    private printItems(value: any): void {
-        let outPut = '';
-        for (const v of value) {
-            outPut = outPut + `${v}\n`;
-        }
-
-        this.setState({outPut})
-    }
+    // private printItems(value: any): void {
+    //     let outPut = '';
+    //     for (const v of value) {
+    //         outPut = outPut + `${v}\n`;
+    //     }
+    //
+    //     this.setState({ outPut });
+    // }
 }

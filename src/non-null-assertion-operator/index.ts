@@ -43,3 +43,5 @@ function start(entity: Fish | Bird): void {
         entity.fly();
     }
 }
+
+
