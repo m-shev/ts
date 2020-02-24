@@ -3,6 +3,7 @@ export function mergeWithConstrains<T extends object, R extends object>(a: T, b:
     return {...a, ...b}
 }
 
+
 export function printItems1<T extends {[Symbol.iterator]: () => IterableIterator<any>}>(value: T): void {
     for (const k of value) {
         console.log(k);
@@ -10,9 +11,9 @@ export function printItems1<T extends {[Symbol.iterator]: () => IterableIterator
 }
 
 
-export class Queue1<T> {
+export class Queue<T> {
     private arr: T[];
-    public [Symbol.iterator]: () => IterableIterator<T>;
+    public [Symbol.iterator]: () => IterableIterator<any>;
 
     constructor(...args: T[]) {
         this.arr = args;
@@ -31,7 +32,7 @@ export class Queue1<T> {
         return  this.arr.pop();
     }
 
-    private makeIterator(arr: T[]): () => IterableIterator<T> {
+    private makeIterator(arr: T[]): () => IterableIterator<any> {
         return function* () {
             for (let i = 0; i < arr.length; i++) {
                 yield arr[i];

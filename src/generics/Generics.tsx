@@ -33,15 +33,15 @@ export class Generics extends React.Component<Props, State> {
     }
 
     private readonly onClick = () => {
-        this.setState({count: this.state.count + 1});
+        this.setState({});
     };
 
-    // private printItems(value: any): void {
-    //     let outPut = '';
-    //     for (const v of value) {
-    //         outPut = outPut + `${v}\n`;
-    //     }
-    //
-    //     this.setState({ outPut });
-    // }
+    private printItems(value: any): void {
+        let outPut = '';
+        for (const v of value) {
+            outPut = outPut + `${v}\n`;
+        }
+
+        this.setState({ outPut });
+    }
 }
